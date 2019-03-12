@@ -1,0 +1,27 @@
+[
+  {
+    "value": "100",
+    "synonyms": [
+      "100",
+      "Maximum",
+      "max",
+      "full speed"
+    ]
+  },
+  {
+    "value": "0",
+    "synonyms": [
+      "0",
+      "stop",
+      "minimum"
+    ]
+  },
+  {
+    "value": "50",
+    "synonyms": [
+      "50",
+      "normal",
+      "average"
+    ]
+  }
+]

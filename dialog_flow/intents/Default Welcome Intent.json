@@ -1,0 +1,59 @@
+{
+  "id": "4e02d46d-ff0f-4655-843f-4036099daf9d",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "speech": [
+            "Vous n\u0027auriez pas du revenir, Flynn",
+            "Bonsoir Monsieur Dillinger. Merci d\u0027être revenu si vite"
+          ]
+        },
+        {
+          "type": "suggestion_chips",
+          "platform": "google",
+          "lang": "en",
+          "suggestions": [
+            {
+              "title": "set fans at 100"
+            },
+            {
+              "title": "stop fans"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "You shouldn\u0027t have come back, Flynn",
+            "All of my functions are now yours. Take them!",
+            "Hello, Mr. Dillinger. Thank you for coming back early"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ]
+}

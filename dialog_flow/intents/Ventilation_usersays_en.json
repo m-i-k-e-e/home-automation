@@ -1,0 +1,57 @@
+[
+  {
+    "id": "fd4bf2cb-3d17-44fa-a7bb-67c76f9756a2",
+    "data": [
+      {
+        "text": "set fans at ",
+        "userDefined": false
+      },
+      {
+        "text": "50",
+        "alias": "ventilation_puissance",
+        "meta": "@ventilation_puissance",
+        "userDefined": false
+      },
+      {
+        "text": "%",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "bae26674-84a9-4ecc-885f-e43e5f7f84da",
+    "data": [
+      {
+        "text": "stop",
+        "alias": "ventilation_puissance",
+        "meta": "@ventilation_puissance",
+        "userDefined": true
+      },
+      {
+        "text": " fans",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "01d25039-e39b-43bf-a494-ad795d09fa4d",
+    "data": [
+      {
+        "text": "Set fans at ",
+        "userDefined": false
+      },
+      {
+        "text": "100",
+        "alias": "ventilation_puissance",
+        "meta": "@ventilation_puissance",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  }
+]

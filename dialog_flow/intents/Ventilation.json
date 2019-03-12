@@ -1,0 +1,43 @@
+{
+  "id": "1de71603-d8c9-4d84-a8a1-40b844c12832",
+  "name": "Ventilation",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "055a2e9a-8ae7-4672-b5cf-c469feac1e26",
+          "required": false,
+          "dataType": "@ventilation_puissance",
+          "name": "ventilation_puissance",
+          "value": "$ventilation_puissance",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What power ?"
+            },
+            {
+              "lang": "fr",
+              "value": "Quelle puissance ?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "google": false,
+        "slack": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

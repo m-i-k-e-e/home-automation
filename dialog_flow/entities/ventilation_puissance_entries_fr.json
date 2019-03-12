@@ -1,0 +1,33 @@
+[
+  {
+    "value": "50",
+    "synonyms": [
+      "50%",
+      "normale",
+      "à moitié",
+      "normal"
+    ]
+  },
+  {
+    "value": "0",
+    "synonyms": [
+      "0%",
+      "a l\u0027arrêt",
+      "stop",
+      "Arrête",
+      "arrêt",
+      "minimum"
+    ]
+  },
+  {
+    "value": "100",
+    "synonyms": [
+      "100",
+      "A fond",
+      "plein pot",
+      "maximum",
+      "maximale",
+      "max"
+    ]
+  }
+]

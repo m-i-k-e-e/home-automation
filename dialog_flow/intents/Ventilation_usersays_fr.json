@@ -1,0 +1,91 @@
+[
+  {
+    "id": "bb200633-bd28-4652-b2a7-4854262caf6e",
+    "data": [
+      {
+        "text": "vmc ",
+        "userDefined": false
+      },
+      {
+        "text": "normale",
+        "alias": "ventilation_puissance",
+        "meta": "@ventilation_puissance",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "0e87404c-150f-4035-a9e1-6678d2fdc2ab",
+    "data": [
+      {
+        "text": "Ventilation au ",
+        "userDefined": false
+      },
+      {
+        "text": "maximum",
+        "alias": "ventilation_puissance",
+        "meta": "@ventilation_puissance",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "b8b7d2dd-5733-45cc-be87-28de38bfb508",
+    "data": [
+      {
+        "text": "Met la ventilation à ",
+        "userDefined": false
+      },
+      {
+        "text": "50",
+        "alias": "ventilation_puissance",
+        "meta": "@ventilation_puissance",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "0221994e-84c2-4b0c-a57c-04df4652d3ed",
+    "data": [
+      {
+        "text": "Stop",
+        "alias": "ventilation_puissance",
+        "meta": "@ventilation_puissance",
+        "userDefined": false
+      },
+      {
+        "text": " la ventilation",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  },
+  {
+    "id": "63692aed-87db-4e85-bff5-693f9e2c511a",
+    "data": [
+      {
+        "text": "Mettre la ventilation à ",
+        "userDefined": false
+      },
+      {
+        "text": "50",
+        "alias": "ventilation_puissance",
+        "meta": "@ventilation_puissance",
+        "userDefined": false
+      },
+      {
+        "text": "%",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0
+  }
+]
