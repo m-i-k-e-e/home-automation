@@ -1,2 +1,9 @@
 # home-automation
-### Dialog Flow
+## General
+### Concept
+## Dialog Flow
+### Idea
+## Arduino
+### Idea
+## HomeConnect
+### Idea
