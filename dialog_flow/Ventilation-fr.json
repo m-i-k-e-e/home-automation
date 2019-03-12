@@ -1,0 +1,134 @@
+{
+  "id": "1de71603-d8c9-4d84-a8a1-40b844c12832",
+  "name": "Ventilation",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "055a2e9a-8ae7-4672-b5cf-c469feac1e26",
+          "required": false,
+          "dataType": "@ventilation_puissance",
+          "name": "ventilation_puissance",
+          "value": "$ventilation_puissance",
+          "prompts": [
+            "Quelle puissance ?"
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {
+        "google": false,
+        "slack": false
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "bb200633-bd28-4652-b2a7-4854262caf6e",
+      "data": [
+        {
+          "text": "vmc "
+        },
+        {
+          "text": "normale",
+          "alias": "ventilation_puissance",
+          "meta": "@ventilation_puissance",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "0e87404c-150f-4035-a9e1-6678d2fdc2ab",
+      "data": [
+        {
+          "text": "Ventilation au "
+        },
+        {
+          "text": "maximum",
+          "alias": "ventilation_puissance",
+          "meta": "@ventilation_puissance",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "b8b7d2dd-5733-45cc-be87-28de38bfb508",
+      "data": [
+        {
+          "text": "Met la ventilation à "
+        },
+        {
+          "text": "50",
+          "alias": "ventilation_puissance",
+          "meta": "@ventilation_puissance",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "0221994e-84c2-4b0c-a57c-04df4652d3ed",
+      "data": [
+        {
+          "text": "Stop",
+          "alias": "ventilation_puissance",
+          "meta": "@ventilation_puissance",
+          "userDefined": false
+        },
+        {
+          "text": " la ventilation"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "63692aed-87db-4e85-bff5-693f9e2c511a",
+      "data": [
+        {
+          "text": "Mettre la ventilation à "
+        },
+        {
+          "text": "50",
+          "alias": "ventilation_puissance",
+          "meta": "@ventilation_puissance",
+          "userDefined": false
+        },
+        {
+          "text": "%"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
+}
