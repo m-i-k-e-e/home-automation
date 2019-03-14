@@ -14,8 +14,8 @@
 ### Alternate phone flow
 If Firebase returns an error, the phone app will try to send the update directly to the arduino.
 ## Dialog Flow
-[/dialog_flow/readme](https://github.com/m-i-k-e-e/home-automation/blob/master/dialog_flow/README.md)
+[/dialog_flow](https://github.com/m-i-k-e-e/home-automation/blob/master/dialog_flow)
 ## Arduino
-[/arduino/readme](https://github.com/m-i-k-e-e/home-automation/blob/master/arduino/README.md)
+[/arduino](https://github.com/m-i-k-e-e/home-automation/tree/master/arduino)
 ## HomeConnect
-[/HomeConnect/readme](https://github.com/m-i-k-e-e/home-automation/blob/master/HomeConnect/README.md)
+[/HomeConnect](https://github.com/m-i-k-e-e/home-automation/blob/master/HomeConnect)
