@@ -1,7 +1,8 @@
 # Arduino
 ## Hardware
 * [NodeMCU](https://fr.wikipedia.org/wiki/NodeMCU)
-![NodeMCU](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/NodeMCU_DEVKIT_1.0.jpg/1280px-NodeMCU_DEVKIT_1.0.jpg)
+
+![NodeMCU](https://github.com/m-i-k-e-e/home-automation/blob/master/arduino/docs/nodemcu.jpeg?raw=true)
 * Titon MVHR
 ##Connection
 Arduino Pin | GPIO | Titon
