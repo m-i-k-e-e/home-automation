@@ -4,7 +4,7 @@
 
 ![NodeMCU](https://github.com/m-i-k-e-e/home-automation/blob/master/arduino/docs/nodemcu.jpeg?raw=true)
 * Titon MVHR
-##Connection
+## Wires
 Arduino Pin | GPIO | Titon
 --|--|--
 13 | D7 | U3
