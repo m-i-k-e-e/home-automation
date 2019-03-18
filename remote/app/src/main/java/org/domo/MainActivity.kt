@@ -2,11 +2,12 @@ package org.domo
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import com.android.volley.Request
 import com.android.volley.RequestQueue
+import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
@@ -23,56 +24,15 @@ class MainActivity : AppCompatActivity() {
     private var currentSpeed = MutableLiveData<FanSpeed>()
     private lateinit var queue: RequestQueue
 
-//    private val clickListener = View.OnClickListener { view ->
-//        appCompatTextView.isActivated = view == appCompatTextView
-//        appCompatTextView2.isActivated = view == appCompatTextView2
-//        appCompatTextView3.isActivated = view == appCompatTextView3
-//    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout)
 
         queue = Volley.newRequestQueue(this)
 
-//        appCompatTextView.setOnClickListener(clickListener)
-//        appCompatTextView2.setOnClickListener(clickListener)
-//        appCompatTextView3.setOnClickListener(clickListener)
-
         currentSpeed.observe(this, Observer {
-            appCompatTextView.isActivated = it == FanSpeed.SLOW
-            appCompatTextView2.isActivated = it == FanSpeed.NORMAL
-            appCompatTextView3.isActivated = it == FanSpeed.FAST
+            speed_message.text = it.name.toLowerCase().capitalize()
         })
-
-
-        appCompatTextView.setOnClickListener {
-            FirebaseDatabase.getInstance().reference.child("vmc/fan/0/speed").setValue(
-                FanSpeed.SLOW.speed
-            ) { databaseError, _ ->
-                if (databaseError != null) {
-                    localExecute(FanSpeed.SLOW)
-                }
-            }
-        }
-        appCompatTextView2.setOnClickListener {
-            FirebaseDatabase.getInstance().reference.child("vmc/fan/0/speed").setValue(
-                FanSpeed.NORMAL.speed
-            ) { databaseError, _ ->
-                if (databaseError != null) {
-                    localExecute(FanSpeed.NORMAL)
-                }
-            }
-        }
-        appCompatTextView3.setOnClickListener {
-            FirebaseDatabase.getInstance().reference.child("vmc/fan/0/speed").setValue(
-                FanSpeed.FAST.speed
-            ) { databaseError, _ ->
-                if (databaseError != null) {
-                    localExecute(FanSpeed.FAST)
-                }
-            }
-        }
 
         FirebaseDatabase.getInstance().reference.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {}
@@ -81,12 +41,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-
         if (FirebaseAuth.getInstance().currentUser == null) {
-
-            val providers = arrayListOf(
-                AuthUI.IdpConfig.GoogleBuilder().build()
-            )
+            val providers = arrayListOf(AuthUI.IdpConfig.GoogleBuilder().build())
 
             startActivityForResult(
                 AuthUI.getInstance()
@@ -96,10 +52,34 @@ class MainActivity : AppCompatActivity() {
                 0
             )
         }
+
+        faster.setOnClickListener {
+            FirebaseDatabase.getInstance().reference.child("vmc/fan/0/speed").setValue(
+                currentSpeed.value!!.next().speed
+            ) { databaseError, _ ->
+                local_mode.visibility = View.INVISIBLE
+                if (databaseError != null) {
+                    local_mode.visibility = View.VISIBLE
+                    localExecute(currentSpeed.value!!.next())
+                }
+            }
+        }
+
+        slower.setOnClickListener {
+            FirebaseDatabase.getInstance().reference.child("vmc/fan/0/speed").setValue(
+                currentSpeed.value!!.previous().speed
+            ) { databaseError, _ ->
+                local_mode.visibility = View.INVISIBLE
+                if (databaseError != null) {
+                    local_mode.visibility = View.VISIBLE
+                    localExecute(currentSpeed.value!!.previous())
+                }
+            }
+        }
     }
 
     private fun localExecute(fanSpeed: FanSpeed) {
+        queue.add(StringRequest(Request.Method.GET, BASE_URL + fanSpeed.path,{}, null))
         currentSpeed.value = fanSpeed
-        Toast.makeText(this, fanSpeed.path, Toast.LENGTH_LONG).show()
     }
 }
