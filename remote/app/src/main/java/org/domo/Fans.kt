@@ -16,6 +16,21 @@ enum class FanSpeed(val speed: Long, val duration: Long, val path: String) : Par
                 else -> FAST
             }
         }
+    }
 
+    fun next(): FanSpeed {
+        return when (speed) {
+            0L -> NORMAL
+            1L -> FAST
+            else -> SLOW
+        }
+    }
+
+    fun previous(): FanSpeed {
+        return when (speed) {
+            0L -> FAST
+            1L -> SLOW
+            else -> NORMAL
+        }
     }
 }
