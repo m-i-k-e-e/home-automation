@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout)
 
+        setSupportActionBar(toolbar)
+
         queue = Volley.newRequestQueue(this)
 
         currentSpeed.observe(this, Observer {
